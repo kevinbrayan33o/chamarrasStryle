@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaApp</title>
+ <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+   
+</head>
+<body>
+   <header th:insert="fragments/menu.html::menu-principal">
+       </header>
+
+        <!--************Formulario de registro*************-->
+        <div class="container" style="margin-top: 100px;">
+            <form method="post" th:action="@{/view/productos/guardar}">
+                <div class="row">
+                    <div class="col-sm-4">
+                    
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" 
+                            id="nombre" name="nombre" autofocus required
+                            placeholder="Nombre Producto"
+                            >
+           
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <input type="text" class="form-control" 
+                            id="descripcion" name="descripcion" required
+                            placeholder="Escriba sus apellidos" 
+                            >
+            
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="precio">Precio</label>
+                            <input type="text" class="form-control" 
+                            id="precio" name="precio" required
+                            placeholder="Escriba el precio" 
+                            >
+                          
+          
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" class="form-control" 
+                            id="fecha" name="fecha" required
+                            placeholder=""
+                            pattern=""  title=""
+                            >               
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="confirmar">Seleccione Imagen</label>
+                            <select   class="form-control" name="imagen">
+                              <option value="">Seleccione...</option>
+                              <option value="f7.jpg">f7.jpg</option>
+                              <option value="f5.jpg">f5.jpg</option>
+                              <option value="vans.jpg">vans.jpg</option>
+                              <option value="low.jpg">low.jpg</option>
+                              <option value="air.jpg">air.jpg</option>
+                            </select>     
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <label for="confirmar">Seleccione marca</label>
+                            <select   class="form-control" name="marca">
+                              <option value="">Seleccione...</option>
+                              <option value="Old Skool Vans negro">Old Skool Vans negro</option>
+                              <option value="Air Jordan VI Travis Scott">Air Jordan VI Travis Scott</option>
+                              <option value="NIKE AIR JORDAN 1">NIKE AIR JORDAN 1</option>
+                              <option value="TENIS SUPERSTAR">TENIS SUPERSTAR</option>
+                              
+                            </select> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="detalles">Detalles</label>
+                            <input type="text" class="form-control" 
+                            id="detalles" name="detalles" required
+                            placeholder="Escriba los detalles del producto"
+                   
+                            >    
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4"></div>
+                </div><br>
+        
+         
+        
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4"></div>
+                </div>
+        
+         
+        
+                </form>
+
+ 
+
+        </div>
+
+ 
+
+        <!--***************pie de pagina****************-->
+        <footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+					<script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+					  <script th:src="@{/boostrap/js/popper.js}"></script>
+					  <script th:src="@{/boostrap/js/bootstrap.min.js}"></script>
+					 
+       </body>
+</html>

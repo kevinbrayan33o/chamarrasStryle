@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaApp</title>
+  <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+  </head>
+<body>
+    <header th:insert="fragments/menu.html::menu-principal">
+       </header>
+        <!--***********************************Buscador productos**********************-->
+        <div class="jumbotron bg bg-gradient-dark" style="margin-top: 40px;">
+            <div class="container" >
+            <h4>Encuentra el producto que andas buscando.</h4>
+            Puedes buscar por categorías.
+            <form class="form-inline">
+            <input type="text" class="form-control mb-3" id="exampleFormControlInput1" placeholder="Escriba una búsqueda">&nbsp;
+            <select class="custom-select custom-select mb-3">
+            <option selected>Seleccione una categoría</option>
+            <option value="1">El</option>
+            <option value="2">Ella</option>
+            <option value="3">Modas</option>
+            <option value="4">Novedades</option>
+            <option value="5">Linea Blanca</option>
+            </select>&nbsp;
+            <button type="submit" class="btn bg-danger text-white mb-3">Buscar</button>
+            </form>
+            </div>
+            <!--********************Carrusel*********************************-->
+
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img th:src="@{/imges/F1.jpg}" height="200" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Tienda de sudaderas en línea</h5>
+                      <p>Más de 200 articulos diponibles para estar a la moda </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img th:src="@{/imges/F2.jpg}" height="200" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Sudaderas Importadas</h5>
+                      <p>
+                      Todo lo que necesitas para destacar entre tus amigos,<br>
+                      lo encuentras aqui.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img th:src="@{/imges/f3.png}" height="200" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Más buscado</h5>
+                      <p>
+                      Estar a la moda con sudaderas tambien es un parte del outfit diario.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img th:src="@{/imges/f4_1.png}" height="200" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Comodidad a donde quiera que vallas</h5>
+                      <p>Conoce los tipos de sudaderas disposibles al dia.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <!--********************Productos******************-->
+
+              <div class="container" style="margin-top: 10px;" >
+                <h4 class="font-weight-bold text-center text-capitalize">
+                Productos Destacados</h4>
+                </div>
+                <div class="container-fluid p-3 my-3 ">
+                <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/f5.jpg}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body"> 
+                <h5 class="card-title"><center>Marcas</center></h5>
+                <p class="card-text text-justify">
+                Más de tus marcas sublimadas favoritas solo aqui.
+                </p>
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div>
+
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block"
+                th:src="@{/imges/f6.jpg}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body">
+                
+                <h5 class="card-title"><center>Los favoritos de todo México</center></h5>
+                <p class="card-text">
+                Lo mejor de tus caricaturas en calides.
+                </p>
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div>
+               
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/f7.jpg}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title"><center> Casual Abrigador </center></h5>
+                <p class="card-text">
+                 Luce a la moda en tiempos de frio.
+                </p> 
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver Detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div> 
+        	
+        		<!-- -Se agrego más variedad -->
+        		 <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/f8.jpg}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title"><center>Dama </center></h5>
+                <p class="card-text">
+                Vanguardia y estilo.
+                </p>
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver Detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div>
+                
+                <!-- Se agrego más contenido -->
+                 <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/f9.jpg}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title">Caballero</h5>
+                <p class="card-text">
+				Comodidad y estilo.
+				</p>
+				</div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver Detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div>
+        
+        
+        
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block"
+                th:src="@{/imges/logo.jpg}" alt="Generic placeholder image" width="150" height="150" 
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title">Unisex</h5>
+                <p class="card-text">
+				Echale un gran vistaso a todas la sudaderas disponibles.
+				</p>
+				</div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver detalles &raquo;</a></small>
+                </div>
+                	</div>
+                		</div>
+                			</div>
+                               <!--*********************Pie de pagina***********************-->
+                <footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+              		  <script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+					  <script th:src="@{/boostrap/js/popper.js}"></script>
+					  <script th:src="@{/boostrap/js/bootstrap.min.js}"></script>
+                </div>				 
+    </body>
+</html>

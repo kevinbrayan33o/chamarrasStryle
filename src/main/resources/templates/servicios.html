@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaApp</title>
+ <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+  </head>
+	<body>
+    <header th:insert="fragments/menu.html::menu-principal">
+       </header>
+        <!--********************Video tendencias de la temporada  ************************-->
+        <div class="container" style="margin-top: 90px;">
+            <video class="embed-responsive embed-responsive-16by9" 
+            th:src="@{/video/y2mate.com - OUTFITS DE HOMBRES CON JEANS DE MODA 2020_480p.mp4}"autoplay controls ></video>
+            
+        <div class="container" style="margin-top: 90px;">
+            <video class="embed-responsive embed-responsive-16by9" 
+            th:src="@{/video/y2mate.com - Sudaderas elegantes 2020 para hombres 12 modelos_480p.mp4}"autoplay controls ></video>
+            
+        <!--***************pie de pagina****************-->
+         <footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+         <script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+  		<script th:src="@{/boostrap/js/popper.js}"></script>
+  		<script th:src="@{/boostrap/js/bootstrap.min.js}"></script>
+ 		</div>
+               </div>
+</body>
+</html>
