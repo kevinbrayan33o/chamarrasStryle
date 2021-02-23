@@ -38,9 +38,9 @@
                   <th scope="col">Nombre</th>
                   <th scope="col">Descripción</th>                  
                   <th scope="col">Fecha</th>
-                  <th scope="col">Precio</th>
+                  <th scope="col">Pago</th>
                   <th scope="col">Imagen</th>
-                  <th scope="col">Marca</th>
+                  <th scope="col">Tamaño</th>
                   <th scope="col">Operaciones</th> 
                 </tr>
               </thead>
@@ -50,7 +50,7 @@
                   <td th:text="${p.descripcion}"></td>                 
                   <td th:text="${p.fecha}"></td>
                   <td th:text="${p.precio}"></td>
-                  <td><img th:src="@{/imges/{f2} (f2=${p.imagen})}" width="50" height="50"></td>
+                  <td><img th:src="@{/imges/{Decorativa.jfif} (Decorativa=${p.imagen})}" width="50" height="50"></td>
                   <td th:text="${p.marca}"></td>
                   <td>
                       <a th:href="@{/view/productos/editar/{id} (id=${p.id})}" class="btn btn-success btn-sm" role="button" title="Editar el registro."><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>

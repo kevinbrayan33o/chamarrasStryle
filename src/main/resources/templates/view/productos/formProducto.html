@@ -32,9 +32,9 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="descripcion">Descripción</label>
+                            <label for="descripcion">Apellido</label>
                             <input type="text" class="form-control" 
-                            id="descripcion" th:field="*{descripcion}" name="descripcion" required
+                            id="descripcion" th:field="*{descripcion}" name="Apellido" required
                             placeholder="Escriba sus apellidos" 
                             >
             
@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="precio">Precio</label>
+                            <label for="precio">Ingrese cuanto Pagara</label>
                             <input type="text" class="form-control" 
                             id="precio" th:field="*{precio}" name="precio" required
                             placeholder="Escriba el precio" 
@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="fecha">Fecha</label>
+                            <label for="fecha">Fecha pedido</label>
                             <input type="date" class="form-control" 
                             id="fecha" th:field="*{fecha}" name="fecha" required
                             placeholder=""
@@ -68,29 +68,29 @@
                             <label for="confirmar">Seleccione Imagen</label>
                             <select   class="form-control" th:field="*{imagen}" name="imagen">
                               <option value="">Seleccione...</option>
-                              <option value="f6.jpg">f6.jpg</option>
-                              <option value="f5.jpg">f5.jpg</option>
-                              <option value="f9.jpg">f9.jpg</option>
-                              <option value="f4.jpg">f4.jpg</option>
-                              <option value="f6.jpg">f6.jpg</option>
+                              <option value="VelasCumpleaños.jfif">Cumpleaños</option>
+                              <option value="VelasEspeciales.jfif">Especial</option>
+                              <option value="VelaAmor.jpg">Amor</option>
+                              <option value="MasVelas.jpg">Decorativa</option>
+                              <option value="Decorativa.jfif">Unica</option>
                             </select>     
                           </div>
                     </div>
                     <div class="col-sm-4">
-                      <label for="confirmar">Seleccione marca</label>
+                      <label for="confirmar">Seleccione tamaño</label>
                             <select   class="form-control" th:field="*{marca}" name="marca">
                               <option value="">Seleccione...</option>
-                              <option value="DCS">DCS</option>
-                              <option value="Nikes">Nikes</option>
-                              <option value="PoloX">PoloX</option>
-                              <option value="HurbenShoerst">HurbenShoerst</option>
+                              <option value="Chica">Chica</option>
+                              <option value="Mediana">Mediana</option>
+                              <option value="Grande">Grande</option>
+                              <option value="Colosal">Colosal</option>
                               
                             </select> 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <label for="detalles">Detalles</label>
+                        <label for="detalles">Detalles de como quiere la vela</label>
                             <input type="text" class="form-control" 
                             id="detalles" th:field="*{detalles}" name="detalles" required
                             placeholder="Escriba los detalles del producto"
